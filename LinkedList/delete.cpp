@@ -30,16 +30,23 @@ class linkedlist{
     void del(int index){
         int count = 0;
         Node* current = head;
+       
         if(index == 0){
             head = head -> next;
             return;
         }
         while(count < index-1)
         {
+            if(current == nullptr || current->next == nullptr){
+                cout<<"Invalid Index";
+                return;
+            }
             current = current -> next;
             count++;
         }
-        current -> next = current -> next -> next;
+         Node* temp = current->next;
+         current -> next = temp -> next;
+         delete temp;
 
     }
     
