@@ -11,5 +11,10 @@ int main(){
     int input;
     cout<<"Enter the value you want to search (10, 12, 16, 45, 86,99)"<<endl; 
     cin>>input;
-    cout<<Hashtable[input % 10]<<" found on index "<< input%10; // 86 and 16 on same index 
+    if(input == Hashtable[input%10]){
+    cout<<Hashtable[input % 10]<<" found on index "<< input%10; // 86 and 16 on same index Collision
+    }
+    else{
+        cout<<"Not Found";
+    }
 }
