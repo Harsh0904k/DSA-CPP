@@ -13,4 +13,9 @@ int main(){
         cout<<x.first<<" -> "<<x.second<<endl;
     }
 
+    cout<<endl;
+    for(int i = 0; i<freq.size(); i++){
+        cout<<i<<" -> "<<freq[i]<<endl;
+    }
+
 }
