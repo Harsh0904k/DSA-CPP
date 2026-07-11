@@ -30,13 +30,13 @@ class TreeNode{
     TreeNode(int x): val(x), left(nullptr), right(nullptr){}
 };
 
-void preorder(TreeNode* root){
+void postorder(TreeNode* root){
     if(root == NULL){
         return;
     }
     
-    preorder(root->left);
-    preorder(root->right);
+    postorder(root->left);
+    postorder(root->right);
     cout<<root->val<<" ";
 }
 
@@ -49,6 +49,6 @@ int main(){
     root->right->left = new TreeNode(6);
     root->right->right= new TreeNode(7);
 
-    preorder(root);
+    postorder(root);
 
 }
