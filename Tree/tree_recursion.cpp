@@ -78,16 +78,16 @@ int nodesum(TreeNode* root){
 
 }
 
-bool elementsearch(TreeNode* root, int n){
-    if(root == nullptr){
-        return 0;
-    }
+bool elementsearch(TreeNode* root, int target)
+{
+    if(root == nullptr)
+        return false;
 
-    int left = elementsearch(root->left, n);
-    int right = elementsearch(root->right, n);
+    if(root->val == target)
+        return true;
 
-    return left || right || (root->val == n);
-
+    return elementsearch(root->left, target) ||
+           elementsearch(root->right, target);
 }
 
 int main(){
