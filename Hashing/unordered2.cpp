@@ -16,6 +16,5 @@ for(auto x:relation){
     cout<<x.first<<" -> "<<x.second<<endl;
 }
 
-unordered_map<int,vector<char>>
 
 }
