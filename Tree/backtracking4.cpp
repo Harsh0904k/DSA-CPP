@@ -56,10 +56,10 @@ int nodeSum(treenode* root){
     return left+right+root->data;
 }
 
-int backtrack(treenode* root, int& sum){
+void backtrack(treenode* root, int& sum){
     int target = 8;
     if(root==nullptr){
-        return 0;
+        return ;
     } 
 
     sum = sum+root->data;
@@ -69,12 +69,12 @@ int backtrack(treenode* root, int& sum){
         cout<<"found";
     }
 
-    int left = backtrack(root->left, sum);
-    int right = backtrack(root->right, sum); 
+    backtrack(root->left, sum);
+    backtrack(root->right, sum); 
     
     sum = sum - root->data;
 
-    return 0;
+    return ;
 
 }
 

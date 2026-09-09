@@ -16,7 +16,8 @@ int main(){
         }
         Max = max(right-left+1,Max);
         right++;
-        
+
+    
     }
     cout<<Max;
     return 0;
